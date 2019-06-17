@@ -6,19 +6,14 @@
 </p>
 
 <p align="center">
-  Object Detector for "monster seaweed". The one ruining the Caribbean.
+  Object Detector for "monster seaweed" (sargassum) - the one ruining the Caribbean.
 </p>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/ages-12.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
 
-[![numpy version](https://badge.fury.io/py/numpy.svg)](https://badge.fury.io/py/numpy)
-[![tensorflow version](https://badge.fury.io/py/tensorflow.svg)](https://badge.fury.io/py/tensorflow)
-[![PyPI version](https://badge.fury.io/py/keras-retinanet.svg)](https://badge.fury.io/py/keras-retinanet)
-[![google version](https://badge.fury.io/py/google.svg)](https://badge.fury.io/py/google)
 
 A project that builds a "monster seaweed" (sargassum) detector with a one stage detector along with a review on the seminal paper that enables this technique with focal loss technology.
 
@@ -50,7 +45,7 @@ Whether you use this project, have learned something from it, or just like it, p
 
 ## TL;DR
 
-The objective of this repo is to parse LANDSAT satellite screenshot images and detect bounding boxes for a dangerous species of seaweed saragassum. It contains a ready to detect SargassumNET trained network. (One issue is that the sargassum mats are marked - not labeled - by altering the pixels on the images with yellow lines - with unmarked images we could learn to predict sargassum from)
+The objective of this repo is to parse LANDSAT satellite screenshot images and detect bounding boxes for a signicant amounts dangerous species of seaweed - saragassum. It contains a ready to detect SargassumNET trained network. (One issue is that the sargassum mats are marked - not labeled - by altering the pixels on the images with yellow lines - with unmarked images we could learn to predict sargassum from)
 
 ---
 
@@ -65,7 +60,7 @@ Sargassum excess has become an ecological, tourism, contamination and health cri
   </a>
 </p>
 
-Once the sargassum hits beaches in large quantities it can be too late. By then the waters turn brown, brackish, and dangerous due to the gases that decaying .
+Once the sargassum hits beaches in large quantities it can be too late. By then the waters turn brown, brackish, and dangerous due to the gases that decaying sargassum release.
 
 A possible use for this technology is to have it linked to some sea based excavation tools (such as the barges used by the Mexican marines) to remove the sargassum. Another is to locate and treat sargassum growth sites.
 
@@ -73,7 +68,7 @@ A possible use for this technology is to have it linked to some sea based excava
 
 ## Getting Started
 
-To get started using this repo you'll need to:
+To get started using this repo to detect sargassum you'll need to:
 
 * have a google colab account
 * clone this repo
@@ -88,9 +83,13 @@ To train your own detector in addition you'll need:
 * [labelImg](https://github.com/tzutalin/labelImg) tool to add labels to the image data
 * local Python3 runtime with GUI to label the data
 
+To evaluate test performance:
+
+
+
 ---
 
-## Features
+## Software Features
 
 The features of this detector are:
 
@@ -104,6 +103,7 @@ The features of this detector are:
 
 Once you are running in google colab with access to datasets, all that is needed is to run the
 
+* labeling notebook if labeling data
 * training notebook if training on new data
 * detecting notebook if detecting on new data
 
@@ -138,11 +138,11 @@ To detect on new images:
 
 This is a Python3 project built with the following tools as well as modules from the python Machine Learning ecosystem:
 
-* Jupyter Notebook
-* Google Colab Cloud Computing Platform
-* Google Drive Storage
-* TensorFlow, Keras and sklearn
-* keras-retinanet
+* [Jupyter Notebook](https://jupyter.org/)
+* [Google Colab](https://colab.research.google.com/) Cloud Computing Platform
+* [Google Drive](https://drive.google.com/) Storage
+* [keras-retinanet](https://github.com/fizyr/keras-retinanet)
+    * which depends on [Tensorflow](https://www.tensorflow.org/), [Keras](https://keras.io/) and [sklearn](https://scikit-learn.org/)
 
 ---
 
@@ -178,6 +178,6 @@ Thanks to [fizyr](https://fizyr.com/) for their [keras-retinanet](https://github
 
 ## License
 
->You can check out the full license [here](https://github.com/project-delphi/object-detector/blob/master/LICENSE)
+> You can check out the full license [here](https://github.com/project-delphi/object-detector/blob/master/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
