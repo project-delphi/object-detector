@@ -185,7 +185,7 @@ To train the detector with new data either use the Jupyter Notebook or Python AP
 Run 
 
 ```
-python ./src/utils/api_train.py --training_data path/to/training_data --hyperparameters hyperparameters_dict
+python3 ./src/utils/api_train.py --training_data path/to/training_data --hyperparameters hyperparameters_dict
 ```
 
 ### Detecting On New Images
@@ -208,7 +208,7 @@ To detect on new images either use Jupyter Notebook or the Python API in google 
 Run 
 
 ```
-python ./src/utils/api_inference.py --trained_model path/to/trained_model --detect_dir path/to/test/data --outpath dir/to/save/inferred/image 
+python3 ./src/utils/api_inference.py --trained_model path/to/trained_model --detect_dir path/to/test/data --outpath dir/to/save/inferred/image 
 ```
 
 ---

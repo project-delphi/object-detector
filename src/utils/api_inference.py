@@ -7,3 +7,5 @@ parser.add_argument('outpath')
 args = parser.parse_args()
 
 
+# install dependency
+# run inference
