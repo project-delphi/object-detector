@@ -167,7 +167,7 @@ I'm open to suggestions, feel free to message me on [![@ravkalia twitter][1.1]][
 
 Thanks to the folks over at [SEAS Forecast](http://seas-forecast.com/) for providing publicly available screenshots of marked [LANDSAT](https://landsat.gsfc.nasa.gov/) data.
 
-Thanks to @marilyn-n [![@marilyn-negrete][2.1]][2] for helping process and tag the raw image files.
+Thanks to [@marilyn-n](2) for helping process and tag the raw image files.
 
 Thanks to [RomRoc](https://github.com/RomRoc) for his [tutorial](https://www.freecodecamp.org/news/object-detection-in-colab-with-fizyr-retinanet-efed36ac4af3/) on freecodecamp looking at focal loss.
 
