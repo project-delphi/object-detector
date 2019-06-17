@@ -103,13 +103,13 @@ This detector does:
 
 ## Setup
 
+There is one Google [colab notebook](https://colab.research.google.com/drive/19JK7eyUbTm1yYbBGiC76sT3ZyWJRxwvp) which makes use of google's cloud features - including google drive and GPU access.
+
 Once you are running in google colab with access to datasets, all that is needed is to run:
 
-* labeling notebook if labeling data (this need to be on a local machine)
-* training colab notebook if training on new data
-* detecting colab notebook if detecting on new data
-
-
+* labeling package locally
+* training section of colab notebook if training on new data
+* detecting section of colab notebook if detecting on new data
 
 For labelling data, some installations are needed.
 
@@ -176,7 +176,7 @@ To train the detector with new data either use the Jupyter Notebook or Python AP
 
 * Have the training image files in a local directory 
 * Upload files to google colab - google drive is good for getting files from your local runtime to the cloud
-* Run the training notebook
+* Run the training section of the [notebook](https://colab.research.google.com/drive/19JK7eyUbTm1yYbBGiC76sT3ZyWJRxwvp)
 * Store trained models on google drive
 
 #### Python API
@@ -196,7 +196,7 @@ To detect on new images either use Jupyter Notebook or the Python API in google 
 
 ##### Instructions
 
-* Run the detection notebook
+* Run the detection part of the [notebook](https://colab.research.google.com/drive/19JK7eyUbTm1yYbBGiC76sT3ZyWJRxwvp) - this needs the installation to have been run first
 * Provide credentials when prompted to access storage
 * Upload new image file when prompted
 
@@ -208,7 +208,7 @@ To detect on new images either use Jupyter Notebook or the Python API in google 
 Run 
 
 ```
-python3 ./src/utils/api_inference.py --trained_model path/to/trained_model --detect_dir path/to/test/data --outpath dir/to/save/inferred/image 
+python3 ./src/utils/api_inference.py --trained_model path/to/trained_model --inpath inpath/to/test/data --outpath dir/to/save/inferred/image --classes  path/to/classes/file --threshold threshold 
 ```
 
 ---
