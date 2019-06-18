@@ -46,7 +46,7 @@ Whether you use this project, have learned something from it, or just like it, p
 
 ## TL;DR
 
-The objective of this repo is to parse LANDSAT satellite screenshot images and detect bounding boxes for a signicant amounts dangerous species of seaweed - saragassum. It contains a ready to detect SargassumNET trained network. (One issue is that the sargassum mats are marked - not labeled - by altering the pixels on the images with yellow lines - with unmarked images we could learn to predict sargassum from)
+The objective of this repo is to parse LANDSAT satellite screenshot images and detect bounding boxes for signicant amounts dangerous species of seaweed - saragassum. It contains a ready to detect SargassumNET trained network. (One issue is that the sargassum mats are marked - not labeled - by altering the pixels on the images with yellow lines - with unmarked images we could learn to predict sargassum from)
 
 ---
 
@@ -61,7 +61,7 @@ Sargassum excess has become an ecological, tourism, contamination and health cri
   </a>
 </p>
 
-Once the sargassum hits beaches in large quantities it can be too late. By then the waters turn brown, brackish, and dangerous due to the gases that decaying sargassum release.
+Once the sargassum hits beaches in large quantities it can be too late. By then the waters turn brown, black and dangerous due to the gases that decaying sargassum release.
 
 A possible use for this technology is to have it linked to some sea based excavation tools (such as the barges used by the Mexican marines) to remove the sargassum. Another is to locate and treat sargassum growth sites.
 
