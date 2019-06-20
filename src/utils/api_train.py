@@ -1,8 +1,10 @@
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('training_data')
-parser.add_argument('hyperparameters')
+parser.add_argument('--training_data', type=str, default='data/processed/training/unzipped', 
+help='directory of training data')
+parser.add_argument('--hyperparameters', type=str, default='data/processed/training/unzipped', 
+help='path of hyperparameters config file')
 args = parser.parse_args()
 
 """

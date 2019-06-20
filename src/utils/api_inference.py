@@ -1,14 +1,17 @@
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('trained_model')
-parser.add_argument('classes')
-parser.add_argument('threshold')
-parser.add_argument('inpath')
-parser.add_argument('outpath')
+parser.add_argument('--trained_model', type=str, default='data/processed/training/unzipped', 
+help='path of trained_model')
+parser.add_argument('--classes', type=str, default='data/processed/training/unzipped', 
+help='path of classes csv file')
+parser.add_argument('--threshold', type=int, default='data/processed/training/unzipped', 
+help='threshold to classify at')
+parser.add_argument('--inpath', type=str, default='data/processed/training/unzipped', 
+help='directory of new image data to be inferred on')
+parser.add_argument('--outpath', type=str, default='data/processed/training/unzipped', 
+help='directory to save files from inference output')
 args = parser.parse_args()
-
-
 
 # doesn't work, but intention is here
 import inference

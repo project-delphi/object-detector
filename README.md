@@ -1,4 +1,4 @@
-**NOTE**: **This is still a Work In Progress - some features don't work and some others need debugging**
+**NOTE**: **This is still a Work In Progress - the notebook magic shell commands need to be replaced and the API still needs to be completed **
 
 <h1 align="center"> Object Detector </h1> <br>
 <p align="center">
