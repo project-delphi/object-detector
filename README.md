@@ -1,4 +1,4 @@
-**NOTE**: **This is still a Work In Progress - the notebook magic shell commands need to be replaced and the API still needs to be completed **
+**NOTE**: **This is a Work In Progress - the notebook magic shell commands need to be replaced with python subprocess module commands and the API still needs to be completed**
 
 <h1 align="center"> Object Detector </h1> <br>
 <p align="center">
@@ -46,7 +46,7 @@ Whether you use this project, have learned something from it, or just like it, p
 
 ## TL;DR
 
-The objective of this repo is to parse LANDSAT satellite screenshot images and detect bounding boxes for signicant amounts dangerous species of seaweed - saragassum. It contains a ready to detect SargassumNET trained network. (One issue is that the sargassum mats are marked - not labeled - by altering the pixels on the images with yellow lines - with unmarked images we could learn to predict sargassum from)
+The objective of this repo is to parse LANDSAT satellite screenshot images and detect bounding boxes for signicant amounts dangerous species of seaweed - saragassum. It contains a ready to detect SargassumNET trained network. (One issue is that the sargassum mats are marked - not labeled - by altering the pixels on the images with yellow lines - with unmarked images we could learn to predict sargassum from. )
 
 ---
 
@@ -84,10 +84,6 @@ To train your own detector in addition you'll need:
 * [labelImg](https://github.com/tzutalin/labelImg) tool to add labels to the image data
 * local Python3 runtime with GUI to label the data
 
-To evaluate test performance:
-
-
-
 ---
 
 ## Software Features
@@ -111,13 +107,13 @@ Once you are running in google colab with access to datasets, all that is needed
 * training section of colab notebook if training on new data
 * detecting section of colab notebook if detecting on new data
 
-For labelling data, some installations are needed.
+To label data, some local software installations are needed.
 
 ### LabelImg Installation
 
 Follow installation instructions of the [project](https://github.com/tzutalin/labelImg). 
 
-on OSX these are:
+on OSX the installation commands are:
 
 ```
 pip3 install pyqt5 lxml # Install qt and lxml by pip
@@ -182,6 +178,7 @@ To train the detector with new data either use the Jupyter Notebook or Python AP
 #### Python API
 
 ##### Instructions
+
 Run 
 
 ```
@@ -240,7 +237,7 @@ I'm open to suggestions, feel free to message me on [![@ravkalia twitter][1.1]][
 
 Thanks to [RomRoc](https://github.com/RomRoc) for his [tutorial](https://www.freecodecamp.org/news/object-detection-in-colab-with-fizyr-retinanet-efed36ac4af3/) on freecodecamp looking at focal loss and the full code pipeline that powers this project.
 
-Thanks to [fizyr](https://fizyr.com/) for their [keras-retinanet](https://github.com/fizyr/keras-retinanet) repo which provides a great out of the box implementation of retinatnet.
+Thanks to the AI company [fizyr](https://fizyr.com/) for their open source [keras-retinanet](https://github.com/fizyr/keras-retinanet) repo which provides a great out of the box implementation of retinatnet.
 
 Thanks to the folks over at [SEAS Forecast](http://seas-forecast.com/) for providing publicly available screenshots of marked [LANDSAT](https://landsat.gsfc.nasa.gov/) data.
 
