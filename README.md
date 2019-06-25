@@ -38,6 +38,7 @@ Whether you use this project, have learned something from it, or just like it, p
 * [Setup](#Setup)
 * [Usage](#Usage)
 * [Built With](#Built-With)
+* [To Do](#To-Do)
 * [Feedback](#Feedback)
 * [Thanks](#Thanks)
 * [License](#License)
@@ -219,6 +220,21 @@ This is a Python3 project built with the following tools as well as modules from
 * [Google Drive](https://drive.google.com/) Storage
 * [keras-retinanet](https://github.com/fizyr/keras-retinanet)
     * which depends on [Tensorflow](https://www.tensorflow.org/), [Keras](https://keras.io/) and [sklearn](https://scikit-learn.org/)
+
+---
+
+## To Do
+
+* Add images of results
+* Add discussion of problem data - already marked on the image
+* Add possible solutions and their drawbacks
+* Add working api <— argparse
+* Create release binary file of trained models hosted on github
+* Add data to git LFS/Release
+* Refactor code to work in directory structure of cookiecutter repo
+* Change model paths to directories in models
+* Add docstrings to functions
+* Add unit testing to function
 
 ---
 
