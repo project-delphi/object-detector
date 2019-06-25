@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description='inference program to predict using trained model to new files')
 parser.add_argument('--trained_model', type=str, default='data/processed/training/unzipped', 
 help='path of trained_model')
 parser.add_argument('--classes', type=str, default='data/processed/training/unzipped', 

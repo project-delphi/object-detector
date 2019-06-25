@@ -1,9 +1,10 @@
-import os
-import subprocess
-#######################################################################################     
+from os import chdir
+from subprocess import run
+
 def install_retinanet():
-  subprocess.call('git clone https://github.com/fizyr/keras-retinanet.git'.split(' '))
-  os.chdir('keras-retinanet')
-  subprocess.call('pip install /content/keras-retinanet/'.split(' '))
-  subprocess.call('python setup.py build_ext --inplace'.split(' '))
+  run('git clone https://github.com/fizyr/keras-retinanet.git'.split(' '))
+  chdir('keras-retinanet')
+  run('pip install /content/keras-retinanet/'.split(' '))
+  run('python setup.py build_ext --inplace'.split(' '))
+
 

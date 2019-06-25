@@ -1,21 +1,20 @@
-import subprocess
+import os 
+import csv
+import xml.etree.ElementTree as ET
+from subprocess import run
+
 import gdown
 from google.colab import drive
 
-####################################################
 def ingest(mount_drive_flag, drive_id,dataset_dir='dataset', output = 'cropped_images.zip'):
   if mount_drive_flag:
     drive.mount('/content/gdrive')
     return None
-  subprocess.call(F'mkdir {dataset_dir}'.split(' '))
-  subprocess.call(F'cd {dataset_dir}'.split(' '))
+  run(F'mkdir {dataset_dir}'.split(' '))
+  run(F'cd {dataset_dir}'.split(' '))
   url =  F'https://drive.google.com/uc?id={drive_id}'
   gdown.download(url, output, quiet=False)
-  subprocess.call('cd ..', shell=True)
-####################################################
-import os 
-import csv
-import xml.etree.ElementTree as ET
+  run('cd ..', shell=True)
 
 def process_root(root, dataset_dir, annotations = [], classes = set([])):
   for elem in root:
@@ -48,13 +47,11 @@ def xml2csv(dataset_dir = 'dataset', annotations_file = 'annotations.csv', class
   with open(classes_file, 'w') as f:
     for i, line in enumerate(classes):
       f.write('{},{}\n'.format(line,i))
-#######################################################################################
-import subprocess
 
 def format():
-  subprocess.call('rm -rf /content/keras-retinanet/dataset'.split(' '))
-  subprocess.call('mkdir /content/keras-retinanet/dataset'.split(' '))
-  subprocess.call(['unzip', '-q', '-j', '/content/gdrive/My Drive/sargassum/cropped_images.zip',
+  run('rm -rf /content/keras-retinanet/dataset'.split(' '))
+  run('mkdir /content/keras-retinanet/dataset'.split(' '))
+  run(['unzip', '-q', '-j', '/content/gdrive/My Drive/sargassum/cropped_images.zip',
                  '-d', '/content/keras-retinanet/dataset/'])
-  subprocess.call('rm -rf dataset/._*'.split(' '),shell=True)
+  run('rm -rf dataset/._*'.split(' '),shell=True)
   xml2csv()  

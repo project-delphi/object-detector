@@ -11,9 +11,9 @@ urllib.request.urlretrieve(URL_MODEL, PRETRAINED_MODEL)
 #DRIVE_MODEL = '/content/gdrive/My Drive/Colab Notebooks/objdet_tensorflow_colab/resnet50_csv_10.h5'	
 #shutil.copy(DRIVE_MODEL, PRETRAINED_MODEL)	
 
- print('Downloaded pretrained model to ' + PRETRAINED_MODEL)	
+print('Downloaded pretrained model to ' + PRETRAINED_MODEL)	
 
- cmd = '!keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights ' + PRETRAINED_MODEL + ' --batch-size 8 --lr 1e-3  --steps 200 --epochs 25 csv annotations.csv classes.csv'	
+cmd = 'keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights ' + PRETRAINED_MODEL + ' --batch-size 8 --lr 1e-3  --steps 200 --epochs 25 csv annotations.csv classes.csv'	
 subprocess.call(cmd)	
 
  #### OPTIONAL: EXPORT TRAINED MODEL TO DRIVE ####	

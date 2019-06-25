@@ -1,5 +1,10 @@
+import os
+
 import keras
 import tensorflow as tf
+import pandas
+
+from keras_retinanet import models
 
 def get_session():
   config = tf.ConfigProto()
@@ -9,17 +14,15 @@ def get_session():
 def configure_keras():
   keras.backend.tensorflow_backend.set_session(get_session())
 ########################################################################################
-import os
-import pandas
-from keras_retinanet import models
 
 def model_object(import_from_drive, args):
   import os
   drive_path, classes_path, threshold_score = args
   if import_from_drive:
     model_path = drive_path
-  else: 
-    model_path = os.path.join('snapshots', sorted(os.listdir('snapshots'), reverse=True)[0])
+  else:
+    sorted_list_dir = sorted(os.listdir('snapshots'))
+    model_path = os.path.join('snapshots', sorted_list_dir, reverse=True)[0]
   # load retinanet model
   model = models.load_model(model_path, backbone_name='resnet50')
   model = models.convert_model(model)
