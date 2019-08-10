@@ -15,7 +15,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A project that builds a "monster seaweed" (sargassum) detector with a one stage fast detector along with a [review](./papers/focal_loss_for_dense_object_detection_review.ipynb) on the [seminal paper](https://arxiv.org/abs/1708.02002) that enables this technique with focal loss technology.
 
